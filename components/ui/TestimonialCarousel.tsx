@@ -57,13 +57,13 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
         grabCursor
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide 
-            key={testimonial.id} 
+          <SwiperSlide
+            key={testimonial.id}
             className="!w-[85vw] sm:!w-[550px] lg:!w-[750px] xl:!w-[900px] !h-auto flex"
           >
             {({ isActive }) => {
               const zIndex = isActive ? 30 : 10;
-              
+
               return (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -82,20 +82,19 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   >
                     <div
-                      className={`card card-padded flex flex-col gap-6 w-full h-full bg-white transition-all duration-300 ${
-                        isActive 
-                          ? "border-gray-200 shadow-xl" 
-                          : "border-gray-100 shadow-sm pointer-events-none"
-                      }`}
+                      className={`flex flex-col gap-6 w-full h-full bg-white rounded-[24px] p-8 sm:p-10 lg:p-12 transition-all duration-300 border border-neutral-200/80 ${isActive
+                          ? "shadow-[0_16px_36px_rgba(0,0,0,0.08)]"
+                          : "shadow-[0_4px_16px_rgba(0,0,0,0.02)] pointer-events-none"
+                        }`}
                     >
-                      <Quote className="w-8 h-8 text-accent opacity-20" />
-                      
+                      <Quote className="w-10 h-10 text-neutral-300" />
+
                       <blockquote className="flex-1">
-                        <p className="text-body-lg text-ink-900 font-medium leading-relaxed">
+                        <p className="font-serif text-[22px] sm:text-[26px] text-neutral-900 leading-[1.5] tracking-tight">
                           &quot;{testimonial.quote}&quot;
                         </p>
                       </blockquote>
-                      
+
                       <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
                         <div className="w-12 h-12 rounded-full bg-surface border border-gray-200 flex items-center justify-center shrink-0">
                           <span className="text-sm font-bold text-gray-500">
@@ -124,9 +123,8 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
       <div className="absolute top-1/2 -left-2 md:left-4 -translate-y-1/2 z-40 hidden sm:block">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className={`w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-ink-900 hover:text-accent hover:border-accent transition-all duration-200 ${
-            isBeginning ? "opacity-0 pointer-events-none" : "opacity-0 group-hover/carousel:opacity-100"
-          }`}
+          className={`w-12 h-12 rounded-full bg-white shadow-md border border-neutral-200 flex items-center justify-center text-neutral-900 hover:text-neutral-500 hover:bg-neutral-50 transition-all duration-200 ${isBeginning ? "opacity-0 pointer-events-none" : "opacity-0 group-hover/carousel:opacity-100"
+            }`}
           aria-label="Previous testimonial"
         >
           <ArrowLeft className="w-5 h-5" />
@@ -135,9 +133,8 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
       <div className="absolute top-1/2 -right-2 md:right-4 -translate-y-1/2 z-40 hidden sm:block">
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className={`w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-ink-900 hover:text-accent hover:border-accent transition-all duration-200 ${
-            isEnd ? "opacity-0 pointer-events-none" : "opacity-0 group-hover/carousel:opacity-100"
-          }`}
+          className={`w-12 h-12 rounded-full bg-white shadow-md border border-neutral-200 flex items-center justify-center text-neutral-900 hover:text-neutral-500 hover:bg-neutral-50 transition-all duration-200 ${isEnd ? "opacity-0 pointer-events-none" : "opacity-0 group-hover/carousel:opacity-100"
+            }`}
           aria-label="Next testimonial"
         >
           <ArrowRight className="w-5 h-5" />

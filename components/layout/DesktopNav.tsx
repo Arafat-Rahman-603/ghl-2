@@ -86,12 +86,12 @@ export function DesktopNav() {
 
             {isOpen && item.label === "Services" && (
               <div
-                className="absolute top-full left-0 mt-1 w-[520px] bg-white border border-gray-200 rounded-lg shadow-lg p-4 grid grid-cols-2 gap-4"
+                className="absolute top-full left-0 mt-2 w-[520px] bg-white border-2 border-[#b8e3c3] rounded-[24px] shadow-[6px_6px_0_0_#b8e3c3] p-6 grid grid-cols-2 gap-x-6 gap-y-4"
                 role="menu"
               >
                 {servicesDropdown.map((group) => (
                   <div key={group.label}>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 px-2">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-neutral-900 mb-3 px-3">
                       {group.label}
                     </p>
                     {group.items.map((link) => (
@@ -99,7 +99,7 @@ export function DesktopNav() {
                         key={link.label}
                         href={link.href}
                         role="menuitem"
-                        className="block px-2 py-1.5 text-sm text-ink-600 rounded-md hover:text-ink-900 hover:bg-gray-50 transition-colors"
+                        className="block px-3 py-2 text-sm font-medium text-neutral-600 rounded-lg hover:text-neutral-900 hover:bg-[#b8e3c3] transition-colors"
                         onClick={() => setOpenDropdown(null)}
                       >
                         {link.label}
@@ -107,10 +107,10 @@ export function DesktopNav() {
                     ))}
                   </div>
                 ))}
-                <div className="col-span-2 border-t border-gray-100 pt-3 mt-1">
+                <div className="col-span-2 border-t border-neutral-200 pt-4 mt-2 px-3">
                   <Link
                     href="/services"
-                    className="text-sm font-semibold text-accent hover:underline"
+                    className="text-sm font-bold text-neutral-900 hover:underline underline-offset-4"
                     onClick={() => setOpenDropdown(null)}
                   >
                     View all services →
@@ -121,7 +121,7 @@ export function DesktopNav() {
 
             {isOpen && item.label === "Industries" && (
               <div
-                className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-lg p-3"
+                className="absolute top-full left-0 mt-2 w-64 bg-white border-2 border-[#b8e3c3] rounded-[20px] shadow-[4px_4px_0_0_#b8e3c3] p-4"
                 role="menu"
               >
                 {industriesDropdown.map((link) => (
@@ -129,7 +129,7 @@ export function DesktopNav() {
                     key={link.label}
                     href={link.href}
                     role="menuitem"
-                    className="block px-2 py-1.5 text-sm text-ink-600 rounded-md hover:text-ink-900 hover:bg-gray-50 transition-colors"
+                    className="block px-3 py-2 text-sm font-medium text-neutral-600 rounded-lg hover:text-neutral-900 hover:bg-[#b8e3c3] transition-colors"
                     onClick={() => setOpenDropdown(null)}
                   >
                     {link.label}

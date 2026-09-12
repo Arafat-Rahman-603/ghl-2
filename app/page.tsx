@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/content/site";
-import { services } from "@/lib/content/services";
-import { industries } from "@/lib/content/industries";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Accordion } from "@/components/ui/Accordion";
 
 import { HomeHeroSection } from "@/components/sections/HomeHeroSection";
-import { ServiceCarousel } from "@/components/ui/ServiceCarousel";
-import { IndustryCarousel } from "@/components/ui/IndustryCarousel";
+import { HomeTrustedBySection } from "@/components/sections/HomeTrustedBySection";
+import { GhlCommandCentreSection } from "@/components/sections/GhlCommandCentreSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { IndustriesSection } from "@/components/sections/IndustriesSection";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
 import { AnimatedStagger, AnimatedItem } from "@/components/ui/AnimatedStagger";
 
@@ -37,27 +37,6 @@ const orgJsonLd = {
 
 function HomeHero() {
   return <HomeHeroSection />;
-}
-
-function ServicesOverview() {
-  return (
-    <section className="pt-12 pb-10 md:pt-16 md:pb-12 bg-surface border-b border-gray-100 overflow-hidden" aria-labelledby="services-overview-heading">
-      <div className="container-page">
-        <div className="mb-6 md:mb-10 flex flex-col items-center">
-          <SectionHeading
-            eyebrow="Services"
-            heading="What we build and implement."
-            subheading="From CRM configuration and workflow automation to funnels and integrations — configured for your specific business."
-            align="center"
-            className="mb-0"
-          />
-        </div>
-        <div className="w-full">
-          <ServiceCarousel services={services} />
-        </div>
-      </div>
-    </section>
-  );
 }
 
 function GhlCapabilitySection() {
@@ -95,28 +74,30 @@ function GhlCapabilitySection() {
   ];
 
   return (
-    <section className="section-md bg-white border-b border-gray-100" aria-labelledby="ghl-cap-heading">
+    <section className="section-md border-b border-gray-200" style={{ backgroundColor: "#f5f4f0" }} aria-labelledby="ghl-cap-heading">
       <div className="container-page">
         <SectionHeading
-          eyebrow="GoHighLevel"
+          eyebrow="GOHIGHLEVEL"
           heading="The complete GoHighLevel implementation."
           subheading="GoHighLevel works best when every system is configured correctly and connected. We implement the platform end-to-end — not feature by feature in isolation."
           align="center"
           className="mb-12"
+          headingClassName="font-serif"
         />
-        <AnimatedStagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <AnimatedStagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto">
           {capabilities.map((cap) => (
             <AnimatedItem key={cap.title} className="h-full">
-              <div className="bg-surface border border-gray-100 p-6 rounded-xl h-full transition-colors hover:border-gray-200">
-                <h3 className="text-sm font-bold text-ink-900 mb-2">{cap.title}</h3>
-                <p className="text-body text-gray-500">{cap.description}</p>
+              <div className="bg-white rounded-[24px] p-8 border border-neutral-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                <h3 className="font-bold text-lg text-neutral-900 mb-3 tracking-tight">{cap.title}</h3>
+                <p className="text-[15px] text-neutral-600 leading-relaxed">{cap.description}</p>
               </div>
             </AnimatedItem>
           ))}
         </AnimatedStagger>
-        <div className="mt-12 text-center">
-          <Link href="/services/gohighlevel-setup" className="btn btn-primary">
-            GoHighLevel Setup Details
+        <div className="mt-14 text-center">
+          <Link href="/services/gohighlevel-setup" className="btn btn-primary group">
+            <span>GoHighLevel Setup Details</span>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </div>
@@ -134,28 +115,79 @@ function HomeProcess() {
   ];
 
   return (
-    <section className="section-md bg-surface border-b border-gray-100" aria-labelledby="home-process-heading">
-      <div className="container-page">
-        <SectionHeading
-          eyebrow="How We Work"
-          heading="A structured implementation process."
-          subheading="Every engagement follows the same disciplined method — scoped to your business, executed systematically."
-          align="center"
-          className="mb-10 lg:text-center"
-        />
-        <AnimatedStagger className="grid sm:grid-cols-5 gap-0 relative">
-          {/* Connecting line (desktop) */}
-          <div className="hidden sm:block absolute top-5 left-[10%] right-[10%] h-px bg-gray-200" aria-hidden="true" />
+    <section className="py-16 md:py-20 bg-white" aria-labelledby="home-process-heading">
+      <div className="container-page max-w-7xl mx-auto px-6">
+        {/* Editorial Header */}
+        <div className="mb-12 md:mb-16 md:max-w-3xl">
+          <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block">
+            How We Work
+          </span>
+          <h2
+            id="home-process-heading"
+            className="text-4xl md:text-5xl font-bold text-ink-900 tracking-tight mb-8"
+          >
+            A structured implementation process.
+          </h2>
+          <p className="text-xl text-gray-500 leading-relaxed">
+            Every engagement follows the same disciplined method — scoped to your business, executed systematically.
+          </p>
+        </div>
 
-          {steps.map((step) => (
-            <AnimatedItem key={step.num} className="relative flex flex-col items-start sm:items-center gap-3 pb-8 sm:pb-0 pl-8 sm:pl-0 border-l sm:border-l-0 border-gray-200">
-              {/* Dot (sm) */}
-              <div className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shrink-0 relative z-10">
-                <span className="text-xs font-semibold tabular-nums text-ink-900">{step.num}</span>
+        {/* Desktop Horizontal Journey */}
+        <AnimatedStagger className="hidden lg:flex justify-between relative">
+          {/* Continuous base line */}
+          <div className="absolute top-[19px] left-5 right-5 h-[2px] bg-gray-100 z-0" />
+
+          {steps.map((step, index) => (
+            <AnimatedItem
+              key={step.num}
+              className="flex-1 relative pr-8 last:pr-0 group cursor-default"
+            >
+              {/* Hover line segment */}
+              {index !== steps.length - 1 && (
+                <div className="absolute top-[19px] left-5 right-0 h-[2px] bg-transparent group-hover:bg-[#1b6ef3]/40 transition-colors duration-300 z-10" />
+              )}
+
+              {/* Step Marker */}
+              <div className="relative z-20 w-10 h-10 rounded-full flex items-center justify-center border-2 bg-white border-gray-200 text-gray-400 group-hover:border-[#1b6ef3] group-hover:text-[#1b6ef3] group-hover:shadow-[0_0_0_4px_rgba(27,110,243,0.1)] transition-all duration-300">
+                <span className="text-sm font-bold">{step.num}</span>
               </div>
-              <div className="sm:text-center">
-                <h3 className="text-sm font-bold text-ink-900 mb-1">{step.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{step.desc}</p>
+
+              {/* Step Content */}
+              <div className="mt-8 max-w-xs relative z-20">
+                <h3 className="text-xl font-bold mb-4 text-ink-900 group-hover:text-[#1b6ef3] transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-base text-gray-500 leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            </AnimatedItem>
+          ))}
+        </AnimatedStagger>
+
+        {/* Mobile Vertical Journey */}
+        <AnimatedStagger className="lg:hidden flex flex-col">
+          {steps.map((step, index) => (
+            <AnimatedItem key={step.num} className="relative flex gap-6 pb-12 last:pb-0 group cursor-default">
+              {/* Vertical connecting line */}
+              {index !== steps.length - 1 && (
+                <div className="absolute top-10 bottom-0 left-[19px] w-[2px] bg-gray-100 group-hover:bg-[#1b6ef3]/40 transition-colors duration-300 z-0" />
+              )}
+
+              {/* Step Marker */}
+              <div className="relative z-10 w-10 h-10 shrink-0 rounded-full bg-white border-2 border-gray-200 text-gray-400 group-hover:border-[#1b6ef3] flex items-center justify-center group-hover:text-[#1b6ef3] group-hover:shadow-[0_0_0_4px_rgba(27,110,243,0.1)] transition-all duration-300">
+                <span className="text-sm font-bold">{step.num}</span>
+              </div>
+
+              {/* Step Content */}
+              <div className="pt-1.5 relative z-10">
+                <h3 className="text-xl font-bold text-ink-900 mb-3 group-hover:text-[#1b6ef3] transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-base text-gray-500 leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             </AnimatedItem>
           ))}
@@ -166,24 +198,7 @@ function HomeProcess() {
 }
 
 function HomeIndustries() {
-  return (
-    <section className="section-md bg-white border-b border-gray-100 overflow-hidden" aria-labelledby="home-industries-heading">
-      <div className="container-page">
-        <div className="mb-8 md:mb-12 flex flex-col items-center">
-          <SectionHeading
-            eyebrow="Industries"
-            heading="Configured for your business type."
-            subheading="Implementation approach adapts to how your industry handles leads, scheduling, and client relationships."
-            align="center"
-            className="mb-0"
-          />
-        </div>
-        <div className="w-full">
-          <IndustryCarousel industries={industries.slice(0, 6)} basePath="/industries" />
-        </div>
-      </div>
-    </section>
-  );
+  return <IndustriesSection />;
 }
 
 function HomePricingSection() {
@@ -243,17 +258,16 @@ function HomePricingSection() {
           heading="Transparent pricing for professional implementation."
           subheading="Choose the level of implementation that matches your business complexity. No hidden fees or ongoing retainers required."
           align="center"
-          className="mb-10 lg:text-center"
+          className="mb-8 lg:text-center"
         />
         <AnimatedStagger className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {packages.map((pkg) => (
             <AnimatedItem key={pkg.name} className="h-full">
               <div
-                className={`card card-padded flex flex-col gap-6 relative transition-all duration-200 h-full ${
-                  pkg.highlighted 
-                    ? "border-ink-900 ring-1 ring-ink-900 shadow-md md:-translate-y-2" 
+                className={`card card-padded flex flex-col gap-6 relative transition-all duration-200 h-full ${pkg.highlighted
+                    ? "border-ink-900 ring-1 ring-ink-900 shadow-md md:-translate-y-2"
                     : "hover:border-gray-300"
-                }`}
+                  }`}
               >
                 {pkg.highlighted && (
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -338,7 +352,7 @@ function HomeFaqSection() {
           heading="Common questions about our setup service."
           subheading="If your question isn't covered here, book a strategy call and we'll be happy to answer it directly."
           align="center"
-          className="mb-10 lg:text-center"
+          className="mb-8 lg:text-center"
         />
         <div className="w-full mt-8">
           <Accordion items={faqs} />
@@ -381,15 +395,16 @@ function HomeTestimonials() {
   ];
 
   return (
-    <section className="section-md bg-white border-b border-gray-100 overflow-hidden" aria-labelledby="home-testimonials-heading">
+    <section className="section-md border-b border-gray-200 overflow-hidden" style={{ backgroundColor: "#f5f4f0" }} aria-labelledby="home-testimonials-heading">
       <div className="container-page">
-        <div className="mb-6 md:mb-10 flex flex-col items-center">
+        <div className="mb-4 md:mb-12 flex flex-col items-center">
           <SectionHeading
-            eyebrow="Client Success"
+            eyebrow="CLIENT SUCCESS"
             heading="Systems that drive real business results."
             subheading="Don't just take our word for it. Here's what business leaders say about our implementation process."
             align="center"
             className="mb-0"
+            headingClassName="font-serif tracking-tight"
           />
         </div>
         <div className="w-full">
@@ -408,7 +423,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
       <HomeHero />
-      <ServicesOverview />
+      <HomeTrustedBySection />
+      <GhlCommandCentreSection />
+      <ServicesSection />
       <GhlCapabilitySection />
       <HomeProcess />
       <HomeIndustries />

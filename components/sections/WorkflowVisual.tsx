@@ -44,7 +44,7 @@ const WORKFLOW_STEPS = [
   {
     id: "end",
     label: "End / Branch",
-    title: "Tag & Move Stage",
+    title: "Tag and Move Stage",
     detail: "Based on response",
     type: "end",
   },

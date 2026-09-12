@@ -84,7 +84,7 @@ export const ghlOutcome = {
 export const ghlProcess: ProcessStep[] = [
   {
     number: "01",
-    title: "Business & Workflow Audit",
+    title: "Business and Workflow Audit",
     description:
       "We map your lead sources, sales process, follow-up requirements, scheduling needs, and communication preferences before touching the platform.",
     outcome:
@@ -100,7 +100,7 @@ export const ghlProcess: ProcessStep[] = [
   },
   {
     number: "03",
-    title: "CRM & Pipeline Configuration",
+    title: "CRM and Pipeline Configuration",
     description:
       "Custom pipeline stages, contact fields, lead source tracking, opportunity values, and task triggers built to match your actual business workflow.",
     outcome:
@@ -108,7 +108,7 @@ export const ghlProcess: ProcessStep[] = [
   },
   {
     number: "04",
-    title: "Automation & Scheduling",
+    title: "Automation and Scheduling",
     description:
       "Lead follow-up sequences, appointment confirmation and reminder workflows, calendar availability, booking pages, and post-service communication.",
     outcome:
@@ -116,7 +116,7 @@ export const ghlProcess: ProcessStep[] = [
   },
   {
     number: "05",
-    title: "Testing, Launch & Handover",
+    title: "Testing, Launch and Handover",
     description:
       "End-to-end testing of every workflow, form, and communication channel. Documentation of what was built and how it works. Structured handover.",
     outcome:
@@ -128,7 +128,7 @@ export const ghlProcess: ProcessStep[] = [
 
 export const ghlConfigCategories: ConfigCategory[] = [
   {
-    title: "CRM & Pipeline",
+    title: "CRM and Pipeline",
     items: [
       "Custom opportunity pipeline stages",
       "Pipeline stage probability settings",
@@ -139,7 +139,7 @@ export const ghlConfigCategories: ConfigCategory[] = [
     ],
   },
   {
-    title: "Calendar & Booking",
+    title: "Calendar and Booking",
     items: [
       "Availability and business hours",
       "Appointment type configuration",
@@ -182,7 +182,7 @@ export const ghlConfigCategories: ConfigCategory[] = [
     ],
   },
   {
-    title: "Reporting & Handover",
+    title: "Reporting and Handover",
     items: [
       "End-to-end workflow testing",
       "Lead-to-close pipeline verification",
@@ -219,7 +219,7 @@ export const ghlIndustries: Industry[] = [
   },
   {
     slug: "coaching-consulting",
-    name: "Coaching & Consulting",
+    name: "Coaching and Consulting",
     description:
       "Discovery call booking, program enrollment workflows, client check-in automation. Structured follow-up for prospective and active clients.",
     workflows: [

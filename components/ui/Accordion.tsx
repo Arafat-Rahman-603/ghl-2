@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import type { FaqItem } from "@/lib/content/types";
 
 interface AccordionProps {
@@ -45,15 +46,24 @@ export function Accordion({ items, className = "" }: AccordionProps) {
                 </svg>
               </button>
             </h3>
-            <div
-              id={panelId}
-              role="region"
-              aria-labelledby={id}
-              hidden={!isOpen}
-              className="accordion-content"
-            >
-              <div className="accordion-body">{item.answer}</div>
-            </div>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={id}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="accordion-content block">
+                    <div className="accordion-body">{item.answer}</div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       })}

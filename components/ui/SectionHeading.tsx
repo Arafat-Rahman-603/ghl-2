@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   subheading?: string;
   align?: "left" | "center";
   className?: string;
+  headingClassName?: string;
 }
 
 export function SectionHeading({
@@ -12,6 +13,7 @@ export function SectionHeading({
   subheading,
   align = "left",
   className = "",
+  headingClassName = "",
 }: SectionHeadingProps) {
   const alignClass =
     align === "center" ? "text-center items-center" : "text-left items-start";
@@ -21,7 +23,7 @@ export function SectionHeading({
       {eyebrow && (
         <span className="eyebrow mb-3">{eyebrow}</span>
       )}
-      <h2 className={`text-headline ${align === "center" ? "max-w-[850px] mx-auto" : ""}`}>{heading}</h2>
+      <h2 className={`text-headline ${align === "center" ? "max-w-[850px] mx-auto" : ""} ${headingClassName}`}>{heading}</h2>
       {subheading && (
         <p className={`text-body-lg mt-3 text-gray-500 ${align === "center" ? "max-w-[700px] mx-auto" : "max-w-[600px]"}`}>
           {subheading}

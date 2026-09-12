@@ -21,7 +21,7 @@ export const services: ServiceCard[] = [
   },
   {
     slug: "crm-setup",
-    title: "CRM Setup & Configuration",
+    title: "CRM Setup and Configuration",
     tagline: "A CRM that actually reflects how your business works.",
     description:
       "Custom pipelines, contact fields, lead tracking, and opportunity management configured around your real sales process — not default settings.",

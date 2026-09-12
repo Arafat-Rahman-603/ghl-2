@@ -33,7 +33,7 @@ export const industriesDropdown: NavItem[] = [
   { label: "Real Estate", href: "/industries/real-estate" },
   { label: "Home Services", href: "/industries/home-services" },
   { label: "Marketing Agencies", href: "/industries/marketing-agencies" },
-  { label: "Coaching & Consulting", href: "/industries/coaching-consulting" },
+  { label: "Coaching and Consulting", href: "/industries/coaching-consulting" },
   { label: "Healthcare", href: "/industries/healthcare" },
   { label: "Professional Services", href: "/industries/professional-services" },
 ];
@@ -62,7 +62,7 @@ export const footerNav = {
   ],
   resources: [
     { label: "Implementation FAQ", href: "/faq" },
-    { label: "Blog & Guides", href: "/blog" },
+    { label: "Blog and Guides", href: "/blog" },
     { label: "Solutions Overview", href: "/solutions" },
     { label: "All Services", href: "/services" },
   ],

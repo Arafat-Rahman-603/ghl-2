@@ -22,8 +22,8 @@ export function Header() {
     <header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm py-0" 
-          : "bg-white/0 border-b border-transparent py-1"
+          ? "bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm py-2" 
+          : "bg-[#f5f4f0] border-b border-transparent py-3"
       }`} 
       role="banner"
     >
@@ -32,9 +32,12 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-bold text-lg text-ink-900 tracking-tight shrink-0 mr-6"
+            className="font-bold text-xl text-neutral-900 tracking-tight flex items-center gap-2 shrink-0 mr-6 hover:opacity-80 transition-opacity"
             aria-label={`${site.name} — Go to homepage`}
           >
+            <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center">
+              <div className="w-2 h-4 bg-white rounded-sm transform skew-x-12" />
+            </div>
             {site.name}
           </Link>
 
@@ -43,7 +46,7 @@ export function Header() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-2 ml-4 shrink-0">
-            <Link href="/contact" className="btn btn-ghost btn-sm">
+            <Link href="/contact" className="btn btn-outline btn-sm">
               Contact
             </Link>
             <Link href={site.cta.bookCall} className="btn btn-primary btn-sm">

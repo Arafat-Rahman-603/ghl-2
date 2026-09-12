@@ -39,7 +39,7 @@ export const industries: Industry[] = [
   },
   {
     slug: "coaching-consulting",
-    name: "Coaching & Consulting",
+    name: "Coaching and Consulting",
     description:
       "Discovery call booking automation, program enrollment workflows, ongoing client check-in sequences. Structured follow-up for prospective and enrolled clients.",
     workflows: [
@@ -71,6 +71,30 @@ export const industries: Industry[] = [
       "Proposal and engagement follow-up",
       "Client onboarding workflow",
       "Retention and referral automation",
+    ],
+  },
+  {
+    slug: "digital-agencies",
+    name: "Digital Agencies",
+    description:
+      "White-label GoHighLevel systems your clients use under your brand, end to end. Sub-account snapshots, custom domains, and automated client reporting.",
+    workflows: [
+      "White-label client onboarding",
+      "Sub-account snapshot deployment",
+      "Client communication workflows",
+      "Monthly automated reporting",
+    ],
+  },
+  {
+    slug: "ecommerce",
+    name: "E-commerce",
+    description:
+      "Abandoned cart recovery, SMS follow-ups, post-purchase automation, and VIP customer retention flows integrated with Shopify and WooCommerce.",
+    workflows: [
+      "Abandoned cart recovery",
+      "Post-purchase nurture sequences",
+      "SMS review and referral triggers",
+      "Repeat purchase reactivation",
     ],
   },
 ];

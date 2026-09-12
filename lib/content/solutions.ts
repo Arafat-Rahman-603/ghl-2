@@ -3,7 +3,7 @@ import type { SolutionItem } from "./types";
 export const solutions: SolutionItem[] = [
   {
     slug: "lead-generation",
-    title: "Lead Capture & Management",
+    title: "Lead Capture and Management",
     description:
       "Structure your CRM and automation so every inbound lead is captured, categorized, and followed up with consistently — without manual intervention.",
     outcomes: [
@@ -29,7 +29,7 @@ export const solutions: SolutionItem[] = [
   },
   {
     slug: "appointment-booking",
-    title: "Appointment Booking & Scheduling",
+    title: "Appointment Booking and Scheduling",
     description:
       "Replace back-and-forth scheduling with structured booking systems that confirm, remind, and follow up automatically.",
     outcomes: [
@@ -42,7 +42,7 @@ export const solutions: SolutionItem[] = [
   },
   {
     slug: "customer-followup",
-    title: "Client Follow-up & Retention",
+    title: "Client Follow-up and Retention",
     description:
       "Keep existing clients engaged and informed through structured post-service communication, review requests, and re-engagement sequences.",
     outcomes: [

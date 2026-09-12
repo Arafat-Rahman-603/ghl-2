@@ -5,7 +5,7 @@ import type { SiteConfig } from "./types";
 
 export const site: SiteConfig = {
   name: "Operiq",
-  tagline: "GoHighLevel Implementation & Business Automation",
+  tagline: "GoHighLevel Implementation and Business Automation",
   description:
     "Professional GoHighLevel setup, CRM implementation, workflow automation, and funnel development for growing businesses and agencies.",
   url: "https://operiq.com",
