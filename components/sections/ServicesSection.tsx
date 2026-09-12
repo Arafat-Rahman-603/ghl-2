@@ -135,7 +135,7 @@ function ServiceCard({ item, isActive }: { item: typeof SERVICE_ITEMS[0]; isActi
 
         <div className="flex items-start justify-between">
           <span style={{ fontSize: 11, fontWeight: 700, color: "#d1d5db" }}>{item.num}</span>
-          <ServiceIcon iconKey={item.iconKey} from={item.gradientFrom} to={item.gradientTo} />
+          <ServiceIcon iconKey={item.iconKey as keyof typeof ICONS} from={item.gradientFrom} to={item.gradientTo} />
         </div>
 
         <div className="flex-1 flex flex-col gap-3">
@@ -186,7 +186,9 @@ export function ServicesSection() {
     timerRef.current = setInterval(() => {
       setActiveIdx((i) => (i + 1) % count);
     }, 4000);
-    return () => clearInterval(timerRef.current);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [paused, count]);
 
   // shortest signed distance around the circle, e.g. for 5 items: -2..2
