@@ -67,7 +67,7 @@ export function Footer() {
               </Link>
             </div>
             
-            <p className="text-[14px] text-neutral-600 leading-[1.65] mb-8 max-w-[280px]">
+            <p className="text-body-sm mb-8 max-w-[280px]">
               GoHighLevel automation agency helping businesses scale with CRM systems, AI chatbots, and data-driven marketing.
             </p>
 
@@ -106,7 +106,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-[11px] font-bold uppercase tracking-widest text-neutral-800 mb-6">
+            <h3 className="text-label text-neutral-800 mb-6">
               Services
             </h3>
             <ul className="flex flex-col gap-3.5">
@@ -114,7 +114,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[13px] text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-caption hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -133,7 +133,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[13px] text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-caption hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -152,7 +152,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[13px] text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-caption hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -171,7 +171,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[13px] text-neutral-600 hover:text-neutral-900 transition-colors"
+                    className="text-caption hover:text-neutral-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -183,7 +183,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4">
-          <p className="text-[12px] text-neutral-500 text-center md:text-left">
+          <p className="text-caption text-center md:text-left">
             © {year} {site.name}. GoHighLevel and HighLevel are trademarks of HighLevel Inc.
           </p>
           <div className="flex items-center gap-6">
@@ -191,7 +191,7 @@ export function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-[12px] text-neutral-500 hover:text-neutral-900 transition-colors underline underline-offset-4"
+                className="text-caption hover:text-neutral-900 transition-colors underline underline-offset-4"
               >
                 {link.label}
               </Link>

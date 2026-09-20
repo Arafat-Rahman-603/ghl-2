@@ -16,7 +16,7 @@ export function HomeTrustedBySection() {
   return (
     <section className="py-10 border-b border-gray-100 bg-white overflow-hidden relative">
       <div className="container-page mb-6">
-        <p className="text-center text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400">
+        <p className="text-center eyebrow text-gray-400">
           Trusted by growing agencies and businesses
         </p>
       </div>
@@ -39,7 +39,7 @@ export function HomeTrustedBySection() {
               className="flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-default"
             >
               <div className="text-neutral-900">{partner.icon}</div>
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-neutral-900">
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900">
                 {partner.name}
               </span>
             </div>

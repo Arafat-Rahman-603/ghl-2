@@ -90,22 +90,22 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                       <Quote className="w-10 h-10 text-neutral-300" />
 
                       <blockquote className="flex-1">
-                        <p className="font-serif text-[22px] sm:text-[26px] text-neutral-900 leading-[1.5] tracking-tight">
+                        <p className="text-[22px] sm:text-[26px] text-neutral-900 leading-[1.5] tracking-tight">
                           &quot;{testimonial.quote}&quot;
                         </p>
                       </blockquote>
 
                       <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
                         <div className="w-12 h-12 rounded-full bg-surface border border-gray-200 flex items-center justify-center shrink-0">
-                          <span className="text-sm font-bold text-gray-500">
+                          <span className="text-body-sm font-bold text-gray-500">
                             {testimonial.author.charAt(0)}
                           </span>
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-ink-900">
+                          <p className="text-body-sm font-bold text-ink-900">
                             {testimonial.author}
                           </p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-caption text-gray-500">
                             {testimonial.role}, {testimonial.company}
                           </p>
                         </div>

@@ -82,14 +82,13 @@ function GhlCapabilitySection() {
           subheading="GoHighLevel works best when every system is configured correctly and connected. We implement the platform end-to-end — not feature by feature in isolation."
           align="center"
           className="mb-12"
-          headingClassName="font-serif"
         />
         <AnimatedStagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1100px] mx-auto">
           {capabilities.map((cap) => (
             <AnimatedItem key={cap.title} className="h-full">
               <div className="bg-white rounded-[24px] p-8 border border-neutral-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                <h3 className="font-bold text-lg text-neutral-900 mb-3 tracking-tight">{cap.title}</h3>
-                <p className="text-[15px] text-neutral-600 leading-relaxed">{cap.description}</p>
+                <h3 className="text-subtitle text-neutral-900 mb-3">{cap.title}</h3>
+                <p className="text-body-sm text-neutral-600">{cap.description}</p>
               </div>
             </AnimatedItem>
           ))}
@@ -119,16 +118,16 @@ function HomeProcess() {
       <div className="container-page max-w-7xl mx-auto px-6">
         {/* Editorial Header */}
         <div className="mb-12 md:mb-16 md:max-w-3xl">
-          <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block">
+          <span className="eyebrow mb-4 block">
             How We Work
           </span>
           <h2
             id="home-process-heading"
-            className="text-4xl md:text-5xl font-bold text-ink-900 tracking-tight mb-8"
+            className="text-headline mb-8"
           >
             A structured implementation process.
           </h2>
-          <p className="text-xl text-gray-500 leading-relaxed">
+          <p className="text-body-lg text-gray-500">
             Every engagement follows the same disciplined method — scoped to your business, executed systematically.
           </p>
         </div>
@@ -150,15 +149,15 @@ function HomeProcess() {
 
               {/* Step Marker */}
               <div className="relative z-20 w-10 h-10 rounded-full flex items-center justify-center border-2 bg-white border-gray-200 text-gray-400 group-hover:border-[#1b6ef3] group-hover:text-[#1b6ef3] group-hover:shadow-[0_0_0_4px_rgba(27,110,243,0.1)] transition-all duration-300">
-                <span className="text-sm font-bold">{step.num}</span>
+                <span className="text-caption font-bold">{step.num}</span>
               </div>
 
               {/* Step Content */}
               <div className="mt-8 max-w-xs relative z-20">
-                <h3 className="text-xl font-bold mb-4 text-ink-900 group-hover:text-[#1b6ef3] transition-colors duration-300">
+                <h3 className="text-subtitle mb-4 text-ink-900 group-hover:text-[#1b6ef3] transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="text-base text-gray-500 leading-relaxed">
+                <p className="text-body text-gray-500">
                   {step.desc}
                 </p>
               </div>
@@ -177,15 +176,15 @@ function HomeProcess() {
 
               {/* Step Marker */}
               <div className="relative z-10 w-10 h-10 shrink-0 rounded-full bg-white border-2 border-gray-200 text-gray-400 group-hover:border-[#1b6ef3] flex items-center justify-center group-hover:text-[#1b6ef3] group-hover:shadow-[0_0_0_4px_rgba(27,110,243,0.1)] transition-all duration-300">
-                <span className="text-sm font-bold">{step.num}</span>
+                <span className="text-caption font-bold">{step.num}</span>
               </div>
 
               {/* Step Content */}
               <div className="pt-1.5 relative z-10">
-                <h3 className="text-xl font-bold text-ink-900 mb-3 group-hover:text-[#1b6ef3] transition-colors duration-300">
+                <h3 className="text-subtitle text-ink-900 mb-3 group-hover:text-[#1b6ef3] transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="text-base text-gray-500 leading-relaxed">
+                <p className="text-body text-gray-500">
                   {step.desc}
                 </p>
               </div>
@@ -271,7 +270,7 @@ function HomePricingSection() {
               >
                 {pkg.highlighted && (
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="bg-ink-900 text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
+                    <span className="bg-ink-900 text-white text-label py-1 px-3 rounded-full">
                       {pkg.badge}
                     </span>
                   </div>
@@ -404,7 +403,7 @@ function HomeTestimonials() {
             subheading="Don't just take our word for it. Here's what business leaders say about our implementation process."
             align="center"
             className="mb-0"
-            headingClassName="font-serif tracking-tight"
+            headingClassName="tracking-tight"
           />
         </div>
         <div className="w-full">

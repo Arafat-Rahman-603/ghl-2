@@ -25,7 +25,7 @@ export function SectionHeading({
       )}
       <h2 className={`text-headline ${align === "center" ? "max-w-[850px] mx-auto" : ""} ${headingClassName}`}>{heading}</h2>
       {subheading && (
-        <p className={`text-body-lg mt-3 text-gray-500 ${align === "center" ? "max-w-[700px] mx-auto" : "max-w-[600px]"}`}>
+        <p className={`text-body-lg mt-3 ${align === "center" ? "max-w-[700px] mx-auto" : "max-w-[600px]"}`}>
           {subheading}
         </p>
       )}

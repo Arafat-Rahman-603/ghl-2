@@ -16,7 +16,7 @@ export function ProcessSection() {
           </span>
           <h2
             id="process-heading"
-            className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-ink-900 tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink-900 tracking-tight"
           >
             How we work with you
           </h2>
@@ -31,14 +31,14 @@ export function ProcessSection() {
             >
               {/* Number */}
               <div className="w-24 shrink-0 mb-4 md:mb-0">
-                <span className="text-2xl md:text-3xl font-serif font-bold text-ink-900">
+                <span className="text-2xl md:text-3xl font-bold text-ink-900">
                   {step.number}
                 </span>
               </div>
               
               {/* Title */}
               <div className="w-full md:w-1/3 shrink-0 mb-4 md:mb-0 pr-6">
-                <h3 className="text-lg md:text-xl font-serif font-bold text-ink-900">
+                <h3 className="text-lg md:text-xl font-bold text-ink-900">
                   {step.title}
                 </h3>
               </div>
