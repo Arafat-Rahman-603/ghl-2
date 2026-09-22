@@ -87,15 +87,7 @@ export function HomeHeroSection() {
           <motion.h1
             variants={itemVariants}
             id="home-hero-heading"
-            className="mb-4"
-            style={{
-              fontSize: "clamp(2.25rem, 5.5vw, 3.75rem)",
-              fontWeight: 800,
-              lineHeight: 1.06,
-              letterSpacing: "-0.035em",
-              color: "#0a0a0a",
-              maxWidth: "820px",
-            }}
+            className="text-display max-w-[820px] mb-4"
           >
             Hire GoHighLevel{" "}
             {/* Highlighted word — mint background, editorial treatment */}
@@ -121,13 +113,7 @@ export function HomeHeroSection() {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            style={{
-              fontSize: "1.0625rem",
-              lineHeight: 1.65,
-              color: "#4b5563",
-              maxWidth: "520px",
-              marginBottom: "1.5rem",
-            }}
+            className="text-body-lg max-w-[520px] mb-6"
           >
             We map your sales process first, then build the CRM, automations,
             and workflows around it — every system tested and operational before
@@ -162,15 +148,14 @@ export function HomeHeroSection() {
           >
             {trustIndicators.map((item, i) => (
               <React.Fragment key={item.label}>
-                <div className="flex items-center gap-2" style={{ color: "#4b5563", fontSize: "0.8125rem", fontWeight: 500 }}>
+                <div className="flex items-center gap-2 text-caption">
                   {item.icon}
                   {item.label}
                 </div>
                 {i < trustIndicators.length - 1 && (
                   <span
                     aria-hidden="true"
-                    className="hidden sm:block"
-                    style={{ color: "#d1d5db", userSelect: "none" }}
+                    className="hidden sm:block text-gray-300 select-none"
                   >
                     |
                   </span>

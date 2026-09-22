@@ -189,12 +189,12 @@ export function IndustriesSection() {
         {/* ── Header ────────────────────────────────────────────────────────── */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div>
-            <span className="text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-neutral-500 mb-3 block">
+            <span className="eyebrow text-neutral-500 mb-3 block">
               EVERY NICHE, EVERY MARKET
             </span>
             <h2
               id="industries-heading"
-              className="font-serif font-bold text-3xl sm:text-4xl lg:text-[46px] text-neutral-900 leading-[1.1] tracking-[-0.025em]"
+              className="text-headline text-neutral-900"
             >
               A GHL expert for your industry
             </h2>
@@ -256,13 +256,13 @@ export function IndustriesSection() {
                     </div>
                   </div>
 
-                  {/* Card Title (Serif Editorial) */}
-                  <h3 className="font-serif font-bold text-[22px] sm:text-[24px] text-neutral-900 leading-tight mt-6 mb-2.5 tracking-[-0.01em]">
+                  {/* Card Title */}
+                  <h3 className="text-title text-neutral-900 mt-6 mb-2.5">
                     {card.name}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[14px] sm:text-[14.5px] text-neutral-600 leading-[1.62] mb-6">
+                  <p className="text-body-sm text-neutral-600 mb-6">
                     {card.description}
                   </p>
                 </div>
@@ -272,7 +272,7 @@ export function IndustriesSection() {
                   {card.workflows.map((wf, wIdx) => (
                     <span
                       key={wIdx}
-                      className="text-[11px] font-medium text-neutral-500 bg-neutral-100/80 px-2.5 py-1 rounded-md"
+                      className="text-caption text-neutral-500 bg-neutral-100/80 px-2.5 py-1 rounded-md"
                     >
                       {wf}
                     </span>
